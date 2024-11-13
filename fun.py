@@ -87,5 +87,3 @@ def cube_sum(number):
     for num in str_num:
         _sum += math.pow(int(num), 3)
     return int(_sum)
-
-cube_sum(-123)
