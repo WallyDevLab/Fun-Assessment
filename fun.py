@@ -5,6 +5,7 @@ def dog_years():
     Note: For the first two years, a dog year is equal to 10.5 human years. After that, each dog year equals 4 human years.
 
     Expected Output:
+
     ```
     Input a dog's age in human years: 15
     The dog's age in dog's years is 73
@@ -12,6 +13,25 @@ def dog_years():
     """
 
     #enter your code here
+    human_years = input("Input a dog's age in human years: ")
+    
+    #first two years 
+    if float(human_years) <= 2:
+        print("The dog's age in dog's years is 10.5")
+
+    #after 2 days 
+    if float(human_years) > 2:
+        dog_years_answer =4*(float(human_years)-2) + 10.5
+        print(f"The dog's age in dog's years is {round(dog_years_answer,1)} ")
+    
+    if float(human_years) > 20:
+        return None
+
+dog_years()
+    
+
+
+
 
 def fizzbuzz(num):
     """
@@ -26,8 +46,9 @@ def fizzbuzz(num):
 
     #enter your code here
 
-    
 
+    
+sentence = 'I love you'
 def word_lengths(sentence):
     """
     Create a program that takes a sentence and returns a dictionary with each unique word
@@ -41,6 +62,18 @@ def word_lengths(sentence):
     """
     
     #enter your code here
+    sentence_length = int(len(sentence))
+    dict_string = dict(zip(sentence , sentence_length))
+
+    print(dict_string)
+
+
+word_lengths(sentence)
+
+
+
+
+
 
 def cube_sum(number):
     """
@@ -53,3 +86,6 @@ def cube_sum(number):
     """
     
     #enter your code here
+    
+        
+
