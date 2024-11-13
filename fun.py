@@ -13,6 +13,17 @@ def dog_years():
 
     #enter your code here
 
+    human_years = int(input("Input a dog's age in human years: "))
+
+    if human_years <= 2:
+        dog_year = human_years * 10.5
+    if human_years > 2:
+        dog_year = (10.5 * 2) + ((human_years - 2) * 4)
+    
+    return f"The dog's age in dog's years is {int(dog_year)}"
+
+print(dog_years())
+
 def fizzbuzz(num):
     """
     Create a program that returns the numbers as a string from 1 to num. 
@@ -26,7 +37,21 @@ def fizzbuzz(num):
 
     #enter your code here
 
+    output = ""
+
+    for i in range(1, num + 1):
+        if i % 3 != 0 and i % 5 != 0:
+            output += str(i) + " "
+        if i % 3 == 0 and i % 5 == 0:
+            output += "FizzBuzz"
+        elif i % 3 == 0:
+            output += "Fizz" + " "
+        elif i % 5 == 0:
+            output += "Buzz" + " "
     
+    return print(output)
+
+fizzbuzz(15)
 
 def word_lengths(sentence):
     """
@@ -42,6 +67,16 @@ def word_lengths(sentence):
     
     #enter your code here
 
+    word_length_dict = {}
+    sentence = input("Input a sentence: ")
+    for word in sentence.split():
+        # word_length_dict.values()
+        word_length_dict.update(word)
+
+    return f"Output: {word_length_dict}"
+
+print(word_lengths("sentence"))
+
 def cube_sum(number):
     """
     Create a program that calculates the sum of the cubes of each digit in a number.
@@ -53,3 +88,13 @@ def cube_sum(number):
     """
     
     #enter your code here
+
+    nums = []
+    
+    for i in str(number):
+        nums.append(int(i)**3)
+    
+    return sum(nums)
+
+print(cube_sum(123))
+
